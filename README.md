@@ -42,5 +42,5 @@ In npm
 
 ### License
 
-MIT: ... though do 5 lines of code really need a license? ¯\_(ツ)_/¯
+MIT: ... though do 5 lines of code really need a license? ¯\\_(ツ)_/¯
 
