@@ -13,13 +13,31 @@ function dependenciesNeedUpdating() {
 module.exports = dependenciesNeedUpdating;
 ```
 
+## Installation
+
+```
+npm install --save-dev ld-check-dependencies;
+```
+
 ## Usage
+
+In JavaScript
 
 ```
 const dependenciesNeedUpdating = require('ld-check-dependencies');
 if (dependenciesNeedUpdating()) {
   throw new Error('please run `npm install`);
 }
+```
+
+In npm
+
+```
+  ...
+  "scripts": {
+    "build": "ld-check-dependencies && rollup ..."
+  },
+  ...
 ```
 
 ### License
