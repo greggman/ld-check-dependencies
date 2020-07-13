@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+"use strict";
+
+const dependenciesNeedUpdating = require('../index.js');
+if (dependenciesNeedUpdating()) {
+  console.error('dependencies are out of date. Please run `npm install`');
+  process.exit(1);
+}

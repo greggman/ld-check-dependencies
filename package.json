@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "ld-check-dependencies": "./bin/ld-check-dependencies"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/greggman/ld-check-dependencies.git"
