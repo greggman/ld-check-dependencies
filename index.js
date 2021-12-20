@@ -11,5 +11,8 @@ function gt(value, num) {
 module.exports = function dependenciesNeedUpdating() {
   const childProcess = require('child_process');
   const result = JSON.parse(childProcess.execSync('npm install --dry-run --json').toString());
-  return gt(result.added, 0) || gt(result.updated, 0) || gt(result.removed, 0);
+  return gt(result.added, 0) || 
+         (result.changed !== undefined && gt(result.changed, 0)) || 
+         (result.updated !== undefined && gt(result.updated, 0)) || 
+         gt(result.removed, 0);
 };
